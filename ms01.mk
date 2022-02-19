@@ -90,10 +90,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/_hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/_hals.conf
 
-# Shims
-PRODUCT_PACKAGES += \
-    libshim_binder
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
@@ -110,7 +106,7 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/s3ve3g-common/s3ve3g-common-vendor.mk)
+$(call inherit-product, vendor/samsung/ms01-common/ms01-common-vendor.mk)
 
 # common msm8226
 $(call inherit-product, device/samsung/msm8226-common/msm8226.mk)
